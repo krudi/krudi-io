@@ -3,6 +3,7 @@ import '@styles/styles.css';
 import Footer from '@components/footer';
 import Header from '@components/header';
 import Navigation from '@components/navigation';
+import ApolloClientProvider from '@components/providers/apollo-provider';
 import type { Metadata, Viewport } from 'next';
 import { Roboto } from 'next/font/google';
 import { headers } from 'next/headers';
@@ -206,8 +207,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                     <Navigation />
 
                     <Header />
-
-                    <main className="main">{children}</main>
+                    <ApolloClientProvider>
+                        <main className="main">{children}</main>
+                    </ApolloClientProvider>
 
                     <Footer />
                 </div>
