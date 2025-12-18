@@ -1,0 +1,37 @@
+# Environment files
+*.env
+!.env-*
+
+# Dependencies files
+node_modules
+
+# Build output files
+build
+dist
+dev-dist
+.next
+next-env.d.ts
+
+# Tooling caches files
+.cache/
+.cache/.eslintcache
+.eslint-config-inspector
+.cache/tsbuildinfo.json
+
+# OS files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Compiled artifacts files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Secrets files
+*.der
+*.key
+*.pem

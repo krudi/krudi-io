@@ -1,0 +1,91 @@
+import { MetadataRoute } from 'next';
+
+export default function manifest(): MetadataRoute.Manifest {
+    return {
+        name: 'krudi-io',
+        short_name: 'krudi-io',
+        description: 'Description for the webmanifest file.',
+        theme_color: '#FFFFFF',
+        background_color: '#2596BE',
+        display_override: ['window-controls-overlay'],
+        display: 'standalone',
+        id: '/',
+        start_url: '/',
+        lang: 'en-EN',
+        orientation: 'any',
+        prefer_related_applications: true,
+        categories: ['template'],
+        icons: [
+            {
+                src: 'favicons/favicon-16x16.png',
+                type: 'image/png',
+                sizes: '16x16',
+                purpose: 'maskable',
+            },
+            {
+                src: 'favicons/favicon-32x32.png',
+                type: 'image/png',
+                sizes: '32x32',
+                purpose: 'maskable',
+            },
+            {
+                src: 'favicons/favicon-36x36.png',
+                type: 'image/png',
+                sizes: '36x36',
+                purpose: 'maskable',
+            },
+            {
+                src: 'favicons/favicon-48x48.png',
+                type: 'image/png',
+                sizes: '48x48',
+                purpose: 'maskable',
+            },
+            {
+                src: 'favicons/favicon-72x72.png',
+                type: 'image/png',
+                sizes: '72x72',
+                purpose: 'maskable',
+            },
+            {
+                src: 'favicons/favicon-96x96.png',
+                type: 'image/png',
+                sizes: '96x96',
+                purpose: 'any',
+            },
+            {
+                src: 'favicons/favicon-144x144.png',
+                type: 'image/png',
+                sizes: '144x144',
+                purpose: 'maskable',
+            },
+            {
+                src: 'favicons/android-icon-192x192.png',
+                type: 'image/png',
+                sizes: '192x192',
+                purpose: 'any',
+            },
+            {
+                src: 'favicons/favicon-512x512.png',
+                type: 'image/png',
+                sizes: '512x512',
+                purpose: 'any',
+            },
+        ],
+        screenshots: [
+            {
+                src: 'manifest/desktop-home-screen-view.webp',
+                sizes: '1280x720',
+                type: 'image/webp',
+                label: 'Homescreen of the app in the desktop view.',
+                form_factor: 'wide',
+            },
+            {
+                src: 'manifest/mobile-home-screen-view.webp',
+                sizes: '540x720',
+                type: 'image/webp',
+                label: 'Homescreen of the app in the mobile view.',
+                form_factor: 'narrow',
+            },
+        ],
+    };
+}
