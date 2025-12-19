@@ -11,7 +11,8 @@
     &::before {
         z-index: -1;
         content: '';
-        background-color: var(--c-white-200);
+        background: var(--c-white-200);
+        background: linear-gradient(90deg, var(--c-white-200) 0%, var(--c-white) 90%);
         height: 100%;
         width: 100%;
         top: 0;
