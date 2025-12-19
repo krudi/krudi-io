@@ -5,7 +5,20 @@
     "private": false,
     "description": "Personal portfolio website built with Next.js and React, featuring projects and experiments in modern web interfaces.",
     "keywords": [
-        "template"
+        "react",
+        "nextjs",
+        "typescript",
+        "javascript",
+        "frontend",
+        "full-stack",
+        "portfolio",
+        "web-developer",
+        "software-engineer",
+        "design-systems",
+        "cms",
+        "accessibility",
+        "performance",
+        "ui"
     ],
     "homepage": "https://github.com/krudi/krudi-io#readme",
     "bugs": {
