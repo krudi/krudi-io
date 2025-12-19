@@ -7,7 +7,18 @@ const client = new ApolloClient({
             Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_ACCESS_TOKEN}`,
         },
     }),
-    cache: new InMemoryCache(),
+    cache: new InMemoryCache({
+        typePolicies: {
+            Query: {
+                fields: {
+                    user: {
+                        keyArgs: ['login'],
+                        merge: (_, incoming) => incoming,
+                    },
+                },
+            },
+        },
+    }),
 });
 
 export default client;

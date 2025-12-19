@@ -1,13 +1,14 @@
 import { gql } from '@apollo/client';
 
-export const PINNED_REPOS_QUERY = gql`
-    query PinnedRepos($login: String!, $first: Int = 6) {
+export const STARRED_REPOS_QUERY = gql`
+    query StarredRepos($login: String!, $first: Int = 6) {
         user(login: $login) {
-            pinnedItems(first: $first, types: REPOSITORY) {
+            starredRepositories(first: $first, orderBy: { field: STARRED_AT, direction: DESC }) {
                 nodes {
                     ... on Repository {
                         id
                         name
+                        nameWithOwner
                         description
                         url
                         stargazerCount
