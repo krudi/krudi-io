@@ -1,0 +1,77 @@
+.activity {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: var(--spacer-n2);
+}
+
+.activity-list {
+    height: 100%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    display: flex;
+    gap: var(--spacer-3);
+    flex-direction: column;
+    list-style: none;
+}
+
+.activity-list-item {
+    width: 100%;
+}
+
+.activity-list-item-link {
+    padding-block: 1.5rem;
+    padding-inline: 1.5rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacer);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--c-white-200);
+    border-radius: var(--border-radius-md);
+    transition: border-color var(--transition-duration);
+    min-height: 10rem;
+}
+
+.activity-list-item-link:hover,
+.activity-list-item-link:focus-visible {
+    border-color: var(--c-primary-hover);
+}
+
+.activity-list-item-link-title {
+    font-weight: 700;
+}
+
+.activity-list-item-link-language {
+    display: flex;
+    align-items: center;
+    gap: var(--spacer-n2);
+}
+
+.activity-list-item-link-language-dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    display: inline-block;
+    border-radius: var(--border-radius-full);
+    background-color: var(--c-white-200);
+}
+
+.activity-list-item-link-language.state-closed .activity-list-item-link-language-dot {
+    background-color: var(--c-danger);
+}
+
+.activity-list-item-link-language.state-open .activity-list-item-link-language-dot {
+    background-color: var(--c-success);
+}
+
+.activity-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--spacer);
+    margin-bottom: var(--spacer-n1);
+    flex-wrap: wrap;
+}

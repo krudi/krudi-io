@@ -1,0 +1,8 @@
+@import './_text.css' layer(utilities);
+@import './_background-colors.css' layer(utilities);
+@import './_color.css' layer(utilities);
+@import './_margin.css' layer(utilities);
+@import './_padding.css' layer(utilities);
+@import './_font-weight.css' layer(utilities);
+@import './_font-size.css' layer(utilities);
+@import './_text-decoration.css' layer(utilities);

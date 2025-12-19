@@ -1,0 +1,16 @@
+@layer variables, theme, base, layout, html, components, utilities;
+
+@import './theme.css' layer(theme);
+@import './variables.css' layer(variables);
+@import './base/index.css' layer(base);
+@import './layout/index.css' layer(layout);
+@import './html/index.css' layer(html);
+@import './elements/index.css' layer(elements);
+@import './components/index.css' layer(components);
+@import './utilities/index.css' layer(utilities);
+
+.main {
+    display: flex;
+    gap: var(--spacer-4);
+    flex-direction: column;
+}

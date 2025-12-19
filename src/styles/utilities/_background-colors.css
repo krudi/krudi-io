@@ -1,0 +1,59 @@
+.bg-white {
+    background-color: var(--c-white);
+    color: var(--c-white-background-color-emphasis);
+}
+
+.bg-white-100 {
+    background-color: var(--c-white-100);
+    color: var(--c-white-100-background-color-emphasis);
+}
+
+.bg-white-200 {
+    background-color: var(--c-white-200);
+    color: var(--c-white-200-background-color-emphasis);
+}
+
+.bg-black {
+    background-color: var(--c-black);
+    color: var(--c-black-background-color-emphasis);
+}
+
+.bg-gray {
+    background-color: var(--c-gray);
+    color: var(--c-gray-background-color-emphasis);
+}
+
+.bg-beige {
+    background-color: var(--c-beige);
+    color: var(--c-beige-background-color-emphasis);
+}
+
+.bg-primary {
+    background-color: var(--c-primary);
+    color: var(--c-primary-background-color-emphasis);
+}
+
+.bg-secondary {
+    background-color: var(--c-secondary);
+    color: var(--c-secondary-background-color-emphasis);
+}
+
+.bg-success {
+    background-color: var(--c-success);
+    color: var(--c-success-background-color-emphasis);
+}
+
+.bg-info {
+    background-color: var(--c-info);
+    color: var(--c-info-background-color-emphasis);
+}
+
+.bg-warning {
+    background-color: var(--c-warning);
+    color: var(--c-warning-background-color-emphasis);
+}
+
+.bg-danger {
+    background-color: var(--c-danger);
+    color: var(--c-danger-background-color-emphasis);
+}

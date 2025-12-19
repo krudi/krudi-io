@@ -1,0 +1,11 @@
+.section-contact {
+    padding-inline: 1.5rem;
+    padding-block: 3.5rem;
+    background: var(--c-white-200);
+    background: linear-gradient(90deg, var(--c-white-200) 0%, var(--c-white) 90%);
+    color: var(--c-white-200-background-color-emphasis);
+    border-radius: var(--border-radius-md);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--c-white-200);
+}

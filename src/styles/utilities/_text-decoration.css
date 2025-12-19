@@ -1,0 +1,35 @@
+.text-decoration-none {
+    text-decoration: none;
+}
+
+.text-decoration-underline {
+    text-decoration-line: underline;
+}
+
+.text-decoration-overline {
+    text-decoration-line: overline;
+}
+
+.text-decoration-line-through {
+    text-decoration-line: line-through;
+}
+
+.text-decoration-solid {
+    text-decoration-style: solid;
+}
+
+.text-decoration-dashed {
+    text-decoration-style: dashed;
+}
+
+.text-decoration-dotted {
+    text-decoration-style: dotted;
+}
+
+.text-decoration-double {
+    text-decoration-style: double;
+}
+
+.text-decoration-wavy {
+    text-decoration-style: wavy;
+}

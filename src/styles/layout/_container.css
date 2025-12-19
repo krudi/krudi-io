@@ -1,0 +1,8 @@
+.container {
+    width: min(1080px, 100% - var(--spacer-3));
+    margin-inline: auto;
+}
+
+.container-fluid {
+    width: min(1080px, 100% - var(--spacer-3));
+}

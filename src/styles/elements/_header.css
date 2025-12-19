@@ -1,0 +1,30 @@
+.header {
+    max-width: 48rem;
+    display: grid;
+    gap: var(--spacer);
+}
+
+.header-subtitle {
+    width: fit-content;
+    position: relative;
+
+    &::before {
+        z-index: -1;
+        content: '';
+        background-color: var(--c-white-200);
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        border-radius: var(--border-radius-md);
+        rotate: 3deg;
+    }
+}
+
+.header-social-links {
+    display: inline-flex;
+    gap: var(--spacer-2);
+    align-items: center;
+    flex-wrap: wrap;
+}

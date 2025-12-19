@@ -1,0 +1,98 @@
+@layer theme {
+    :root {
+        /* Theme variable colors */
+        --c-white: #ffffff;
+        --c-black: #1c222e;
+        --c-gray: #4e596a;
+        --c-primary: #216e7d;
+        --c-secondary: #353b48;
+        --c-success: #27ae60;
+        --c-info: #0dccf2;
+        --c-warning: #ffc105;
+        --c-danger: #dc3848;
+
+        /* Palette */
+        --c-white-100: #f6f7fb;
+        --c-white-100-hover: color-mix(in oklab, var(--c-white-100) 70%, var(--c-white-100));
+        --c-white-100-background-color-emphasis: var(--c-black);
+        --c-white-200: #efefef;
+        --c-white-200-hover: color-mix(in oklab, var(--c-white-200) 70%, var(--c-white-200));
+        --c-white-200-background-color-emphasis: var(--c-black);
+
+        /* Theme colors */
+
+        /* White */
+        --c-white-hover: color-mix(in oklab, var(--c-white) 70%, var(--c-white));
+        --c-white-background-color-emphasis: var(--c-black);
+
+        /* Black */
+        --c-black-hover: color-mix(in oklab, var(--c-black) 70%, var(--c-black));
+        --c-black-background-color-emphasis: var(--c-white);
+
+        /* Gray */
+        --c-gray-hover: color-mix(in oklab, var(--c-black) 70%, var(--c-black));
+        --c-gray-background-color-emphasis: var(--c-white);
+
+        /* Primary */
+        --c-primary-hover: color-mix(in oklab, var(--c-primary) 70%, var(--c-white));
+        --c-primary-background-color-emphasis: var(--c-white);
+
+        /* Secondary */
+        --c-secondary-hover: color-mix(in oklab, var(--c-secondary) 70%, var(--c-white));
+        --c-secondary-background-color-emphasis: var(--c-white);
+
+        /* Success */
+        --c-success-hover: color-mix(in oklab, var(--c-success) 70%, var(--c-white));
+        --c-success-background-color-emphasis: var(--c-white);
+
+        /* Info */
+        --c-info-hover: color-mix(in oklab, var(--c-info) 70%, var(--c-white));
+        --c-info-background-color-emphasis: var(--c-white);
+
+        /* Warning */
+        --c-warning-hover: color-mix(in oklab, var(--c-warning) 70%, var(--c-white));
+        --c-warning-background-color-emphasis: var(--c-white);
+
+        /* Danger */
+        --c-danger-hover: color-mix(in oklab, var(--c-danger) 70%, var(--c-white));
+        --c-danger-background-color-emphasis: var(--c-white);
+    }
+
+    .dark {
+        --c-white: #1c222e;
+        --c-black: #ffffff;
+
+        /* Theme variable colors */
+        --c-primary: #474f58;
+        --c-secondary: #d2e0fb;
+        --c-success: #27ae60;
+        --c-info: #0dccf2;
+        --c-warning: #ffc105;
+        --c-danger: #dc3848;
+
+        /* Palette */
+        --c-white-100: #151515;
+        --c-white-200: #2c2c2d;
+        --c-black-100: #302c40;
+        --c-black-300: #4a455a;
+        --c-white-400: #423e4e;
+
+        /* Primary */
+        --c-primary-background-color-emphasis: var(--c-black);
+
+        /* Secondary */
+        --c-secondary-background-color-emphasis: var(--c-black);
+
+        /* Success */
+        --c-success-background-color-emphasis: var(--c-white);
+
+        /* Info */
+        --c-info-background-color-emphasis: var(--c-white);
+
+        /* Warning */
+        --c-warning-background-color-emphasis: var(--c-white);
+
+        /* Danger */
+        --c-danger-background-color-emphasis: var(--c-white);
+    }
+}

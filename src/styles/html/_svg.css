@@ -1,0 +1,5 @@
+svg {
+    width: var(--svg-width);
+    height: var(--svg-height);
+    fill: currentcolor;
+}

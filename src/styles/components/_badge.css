@@ -1,0 +1,69 @@
+.badge {
+    padding-block: var(--badge-padding-block);
+    padding-inline: var(--badge-padding-inline);
+    background-color: var(--badge-background-color);
+    display: inline-flex;
+    color: var(--badge-color);
+    border-width: var(--badge-border-width);
+    border-style: var(--badge-border-style);
+    border-color: var(--badge-border-color);
+    border-radius: var(--badge-border-radius);
+    font-size: var(--badge-font-size);
+    font-weight: var(--badge-font-weight);
+}
+
+.badge-white {
+    --badge-background-color: var(--c-white);
+    --badge-color: var(--c-white-background-color-emphasis);
+    --badge-border-width: 1px;
+    --badge-border-style: solid;
+    --badge-border-color: var(--c-white-300);
+}
+
+.badge-primary {
+    --badge-background-color: var(--c-primary);
+    --badge-color: var(--c-primary-background-color-emphasis);
+    --badge-border-width: 0;
+    --badge-border-style: initial;
+    --badge-border-color: none;
+}
+
+.badge-secondary {
+    --badge-background-color: var(--c-secondary);
+    --badge-color: var(--c-secondary-background-color-emphasis);
+    --badge-border-width: 0;
+    --badge-border-style: initial;
+    --badge-border-color: none;
+}
+
+.badge-success {
+    --badge-background-color: var(--c-success);
+    --badge-color: var(--c-success-background-color-emphasis);
+    --badge-border-width: 0;
+    --badge-border-style: initial;
+    --badge-border-color: none;
+}
+
+.badge-info {
+    --badge-background-color: var(--c-info);
+    --badge-color: var(--c-info-background-color-emphasis);
+    --badge-border-width: 0;
+    --badge-border-style: initial;
+    --badge-border-color: none;
+}
+
+.badge-warning {
+    --badge-background-color: var(--c-warning);
+    --badge-color: var(--c-warning-background-color-emphasis);
+    --badge-border-width: 0;
+    --badge-border-style: initial;
+    --badge-border-color: none;
+}
+
+.badge-danger {
+    --badge-background-color: var(--c-danger);
+    --badge-color: var(--c-danger-background-color-emphasis);
+    --badge-border-width: 0;
+    --badge-border-style: initial;
+    --badge-border-color: none;
+}

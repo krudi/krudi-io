@@ -1,0 +1,65 @@
+.github-projects-list {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    list-style: none;
+}
+
+.github-projects-list-item {
+    width: 100%;
+}
+
+.github-projects-list-item-link {
+    padding-block: 1.5rem;
+    padding-inline: 1.5rem;
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    gap: var(--spacer);
+    overflow: hidden;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--c-white-200);
+    border-radius: var(--border-radius-md);
+    transition: border-color var(--transition-duration);
+}
+
+.github-projects-list-item-link:hover,
+.github-projects-list-item-link:focus-visible {
+    border-color: var(--c-primary-hover);
+}
+
+.github-projects-list-item-link-star {
+    padding-inline: 1rem;
+    padding-block: 0.25rem;
+    background-color: var(--c-white-200);
+    top: 0;
+    right: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    border-radius: 0 0 0 var(--border-radius-md);
+}
+
+.github-projects-list-item-link-title {
+    font-weight: 700;
+}
+
+.github-projects-list-item-link-language {
+    display: flex;
+    align-items: center;
+    gap: var(--spacer-n2);
+}
+
+.github-projects-list-item-link-language-dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    display: inline-block;
+    border-radius: var(--border-radius-full);
+    background-color: var(--c-white-200);
+    box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--c-black) 12%, transparent);
+}
