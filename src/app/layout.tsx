@@ -2,35 +2,45 @@ import '@styles/styles.css';
 
 import ApolloClientProvider from '@components/providers/apollo-provider';
 import type { Metadata, Viewport } from 'next';
-import { Roboto } from 'next/font/google';
-import { headers } from 'next/headers';
+import { Lora } from 'next/font/google';
 import type { ReactNode } from 'react';
 
-export const generateMetadata = async (): Promise<Metadata> => {
-    const headersList = await headers();
-    const domain = headersList.get('host') as string;
-
-    return {
-        title: 'krudi-io',
-        metadataBase: new URL(`https://${domain}`),
-      applicationName: 'krudi-io',
-
+export const metadata: Metadata = {
+    title: 'krudi-io',
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
+    applicationName: 'krudi-io',
     description:
         'Personal portfolio website built with Next.js and React, featuring projects and experiments in modern web interfaces.',
-        keywords: ['template'],
+    keywords: [
+        'react',
+        'nextjs',
+        'typescript',
+        'javascript',
+        'frontend',
+        'full-stack',
+        'portfolio',
+        'web-developer',
+        'software-engineer',
+        'design-systems',
+        'cms',
+        'accessibility',
+        'performance',
+        'ui',
+        'ux',
+    ],
     referrer: 'origin-when-cross-origin',
     openGraph: {
         title: 'krudi-io',
         description:
-        'Personal portfolio website built with Next.js and React, featuring projects and experiments in modern web interfaces.',
-            url: `https://${domain}`,
-            siteName: 'Next.js',
+            'Personal portfolio website built with Next.js and React, featuring projects and experiments in modern web interfaces.',
+        url: process.env.NEXT_PUBLIC_SITE_URL!,
+        siteName: 'krudi-io',
         images: [
             {
-                    url: `https://${domain}/meta-tags/page-view.webp`,
+                url: `${process.env.NEXT_PUBLIC_SITE_URL!}/meta-tags/page-view.webp`,
                 width: 1800,
                 height: 1600,
-                    alt: 'Alternative description',
+                alt: 'Portfolio preview',
             },
         ],
         locale: 'en-US',
@@ -38,15 +48,16 @@ export const generateMetadata = async (): Promise<Metadata> => {
     },
     twitter: {
         title: 'krudi-io',
-            description: 'My template with Next.js built on React with focus on performance and best practices.',
+        description:
+            'Personal portfolio website built with Next.js and React, featuring projects and experiments in modern web interfaces.',
         card: 'summary_large_image',
         creator: '@twitter',
         creatorId: '1467726470533754880',
         siteId: '1467726470533754880',
         images: [
             {
-                    url: `https://${domain}/meta-tags/page-view.webp`,
-                    alt: 'Alternative description',
+                url: `${process.env.NEXT_PUBLIC_SITE_URL!}/meta-tags/page-view.webp`,
+                alt: 'Portfolio preview',
             },
         ],
     },
@@ -167,10 +178,11 @@ export const viewport: Viewport = {
     ],
 };
 
-const roboto = Roboto({
-    weight: ['400', '500', '700'],
+const lora = Lora({
+    weight: ['400', '500', '600', '700'],
     subsets: ['latin'],
     display: 'swap',
+    variable: '--body-font-family',
 });
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -178,7 +190,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <html
             lang="en"
             dir="ltr"
-            className={roboto.className}
+            className={lora.className}
         >
             <head>
                 <meta
@@ -200,7 +212,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </head>
             <body className="py-4 container">
                 <ApolloClientProvider>
-                     <main className="main">{children}</main>
+                    <main
+                        className="main"
+                        aria-label="Main content"
+                    >
+                        {children}
+                    </main>
                 </ApolloClientProvider>
             </body>
         </html>
