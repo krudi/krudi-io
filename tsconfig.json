@@ -6,8 +6,10 @@
             "@components/*": ["./src/components/*"],
             "@app/*": ["./src/app/*"],
             "@styles/*": ["./src/styles/*"],
+            "@types": ["./src/types/index"],
             "@types/*": ["./src/types/*"],
             "@graphql/*": ["./src/graphql/*"],
+            "@constants/*": ["./src/constants/*"],
             "@lib/*": ["./src/lib/*"]
         }
     },
@@ -19,7 +21,8 @@
         "src/types/**/*.ts",
         "client.d.ts",
         ".next/types/**/*.ts",
-        ".next/dev/types/**/*.ts"
+        ".next/dev/types/**/*.ts",
+        "src/components/home/dwsdw"
     ],
     "exclude": ["node_modules"]
 }
