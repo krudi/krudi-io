@@ -19,18 +19,21 @@ export default async function Page() {
 
                 <div>
                     <p>
-                        I&apos;m a full stack developer who cares about accessible, thoughtful interfaces and steady
-                        architecture. I enjoy building tools, civic tech, and making the web feel friendlier.
+                        I&apos;m a full-stack developer who cares about accessible, thoughtful interfaces and steady,
+                        well-considered architecture. I enjoy building tools, civic technology, and small projects that
+                        make the web feel a little friendlier.
                     </p>
 
                     <p>
-                        I like working with React, Next.js, TypeScript, Vue, TYPO3, and a sprinkle of tooling to keep
-                        things maintainable.
+                        My day-to-day work spans React, Next.js, TypeScript, Vue, and TYPO3, along with a set of
+                        supporting tools chosen to keep things maintainable over time. I’m especially interested in
+                        systems that are easy to understand, safe to evolve, and respectful of the people using them.
                     </p>
+
                     <p>
-                        I care about open source and building secure, reliable software that helps people. I like
-                        shipping small, useful projects and want to keep doing more of that, with users in mind and a
-                        focus on learning and collaboration.
+                        Open source matters to me, both as a way of learning and as a way of contributing back. I try to
+                        build secure, reliable software that’s genuinely useful, and I enjoy collaborating with others
+                        who care about quality, curiosity, and shared ownership.
                     </p>
                 </div>
 
