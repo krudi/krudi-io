@@ -1,6 +1,7 @@
 import '@styles/styles.css';
 
 import ApolloClientProvider from '@components/providers/apollo-provider';
+import { Analytics } from '@vercel/analytics/next';
 import type { Metadata, Viewport } from 'next';
 import { Lora } from 'next/font/google';
 import type { ReactNode } from 'react';
@@ -219,6 +220,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                         {children}
                     </main>
                 </ApolloClientProvider>
+
+                <Analytics />
             </body>
         </html>
     );

@@ -50,6 +50,7 @@
     },
     "dependencies": {
         "@apollo/client": "^4.0.11",
+        "@vercel/analytics": "^1.6.1",
         "graphql": "^16.12.0",
         "lucide-react": "^0.562.0",
         "next": "^16.0.10",
