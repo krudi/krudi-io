@@ -183,7 +183,6 @@ const lora = Lora({
     weight: ['400', '500', '600', '700'],
     subsets: ['latin'],
     display: 'swap',
-    variable: '--body-font-family',
 });
 
 export default function RootLayout({ children }: { children: ReactNode }) {
