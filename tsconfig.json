@@ -3,14 +3,14 @@
     "compilerOptions": {
         "paths": {
             "@/*": ["./src/*"],
-            "@components/*": ["./src/components/*"],
             "@app/*": ["./src/app/*"],
+            "@components/*": ["./src/components/*"],
+            "@lib/*": ["./src/lib/*"],
             "@styles/*": ["./src/styles/*"],
             "@types": ["./src/types/index"],
             "@types/*": ["./src/types/*"],
             "@graphql/*": ["./src/graphql/*"],
             "@constants/*": ["./src/constants/*"],
-            "@lib/*": ["./src/lib/*"]
         }
     },
     "include": [
