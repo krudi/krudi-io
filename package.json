@@ -39,6 +39,7 @@
         "build": "next build",
         "dev": "next dev",
         "dev:turbo": "next dev --turbo",
+        "clean": "rm -rf .cache node_modules dist",
         "lint:eslint": "eslint . --cache --cache-location .cache/.eslintcache",
         "lint:eslint:fix": "eslint . --fix --cache --cache-location .cache/.eslintcache",
         "lint:prettier": "prettier --check . --cache --cache-strategy metadata --cache-location .cache/.prettiercache",
