@@ -67,15 +67,16 @@ export const metadata: Metadata = {
         description:
             'Personal portfolio of Patryk Kudlik, software engineer building accessible, thoughtful interfaces and resilient architecture with React, TypeScript, Vue, TYPO3.',
         card: 'summary_large_image',
-        creator: '@twitter',
-        creatorId: '1467726470533754880',
-        siteId: '1467726470533754880',
+        creator: '@patrykkudlik',
         images: [
             {
                 url: `${process.env.NEXT_PUBLIC_SITE_URL!}/meta-tags/page-view.png`,
                 alt: 'Portfolio preview for Patryk Kudlik',
             },
         ],
+    },
+    verification: {
+        google: 'OnPG5VlpLp5UmeyYBqwJdFGNYY_LrqEkHifYjK1qlO4',
     },
     icons: {
         icon: [
