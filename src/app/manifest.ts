@@ -4,9 +4,10 @@ export default function manifest(): MetadataRoute.Manifest {
     return {
         name: 'krudi-io',
         short_name: 'krudi-io',
-        description: 'Description for the webmanifest file.',
+        description:
+            'Personal portfolio of Patryk Kudlik, software engineer building accessible, thoughtful interfaces and resilient architecture with React, TypeScript, Vue, TYPO3.',
         theme_color: '#FFFFFF',
-        background_color: '#2596BE',
+        background_color: '#173d3D',
         display_override: ['window-controls-overlay'],
         display: 'standalone',
         id: '/',
@@ -73,14 +74,14 @@ export default function manifest(): MetadataRoute.Manifest {
         ],
         screenshots: [
             {
-                src: 'manifest/desktop-home-screen-view.webp',
+                src: 'manifest/desktop-home-screen-view.png',
                 sizes: '1280x720',
                 type: 'image/webp',
                 label: 'Homescreen of the app in the desktop view.',
                 form_factor: 'wide',
             },
             {
-                src: 'manifest/mobile-home-screen-view.webp',
+                src: 'manifest/mobile-home-screen-view.png',
                 sizes: '540x720',
                 type: 'image/webp',
                 label: 'Homescreen of the app in the mobile view.',
