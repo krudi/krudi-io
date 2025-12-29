@@ -23,6 +23,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL }}
+      NEXT_PUBLIC_MATOMO_URL: ${{ secrets.NEXT_PUBLIC_MATOMO_URL }}
+      NEXT_PUBLIC_MATOMO_SITE_ID: ${{ secrets.NEXT_PUBLIC_MATOMO_SITE_ID }}
+      NEXT_PUBLIC_GITHUB_ACCESS_TOKEN: ${{ secrets.NEXT_PUBLIC_GITHUB_ACCESS_TOKEN }}
+      NEXT_PUBLIC_GITHUB_USERNAME: ${{ secrets.NEXT_PUBLIC_GITHUB_USERNAME }}
 
     steps:
       - uses: krudi/reusable-actions/.github/actions/github-checkout@main

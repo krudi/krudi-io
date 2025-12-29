@@ -4,7 +4,9 @@ import ApolloClientProvider from '@components/providers/apollo-provider';
 import { Analytics } from '@vercel/analytics/next';
 import type { Metadata, Viewport } from 'next';
 import { Lora } from 'next/font/google';
-import type { ReactNode } from 'react';
+import { type ReactNode, Suspense } from 'react';
+
+import { MatomoAnalytics } from '@/components/utils/matomo';
 
 export const metadata: Metadata = {
     title: 'Patryk Kudlik | krudi-io',
@@ -233,6 +235,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                     </main>
                 </ApolloClientProvider>
 
+                <Suspense fallback={null}>
+                    <MatomoAnalytics />
+                </Suspense>
                 <Analytics />
             </body>
         </html>
