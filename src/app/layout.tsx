@@ -7,12 +7,14 @@ import { Lora } from 'next/font/google';
 import type { ReactNode } from 'react';
 
 export const metadata: Metadata = {
-    title: 'krudi-io',
+    title: 'Patryk Kudlik | krudi-io',
     metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
     applicationName: 'krudi-io',
     description:
-        'Personal portfolio website built with Next.js and React, featuring projects and experiments in modern web interfaces.',
+        'Personal portfolio of Patryk Kudlik, software engineer building accessible, thoughtful interfaces and resilient architecture with React, TypeScript, Vue, TYPO3.',
     keywords: [
+        'Patryk Kudlik',
+        'krudi',
         'react',
         'nextjs',
         'typescript',
@@ -29,36 +31,47 @@ export const metadata: Metadata = {
         'ui',
         'ux',
     ],
+    authors: [
+        {
+            name: 'Patryk Kudlik',
+            url: process.env.NEXT_PUBLIC_SITE_URL,
+        },
+    ],
+    creator: 'Patryk Kudlik',
+    publisher: 'Patryk Kudlik',
+    alternates: {
+        canonical: process.env.NEXT_PUBLIC_SITE_URL,
+    },
     referrer: 'origin-when-cross-origin',
     openGraph: {
-        title: 'krudi-io',
+        title: 'Patryk Kudlik | krudi-io',
         description:
-            'Personal portfolio website built with Next.js and React, featuring projects and experiments in modern web interfaces.',
+            'Personal portfolio of Patryk Kudlik, software engineer building accessible, thoughtful interfaces and resilient architecture with React, TypeScript, Vue, TYPO3.',
         url: process.env.NEXT_PUBLIC_SITE_URL!,
-        siteName: 'krudi-io',
+        siteName: 'Patryk Kudlik – krudi-io',
         images: [
             {
-                url: `${process.env.NEXT_PUBLIC_SITE_URL!}/meta-tags/page-view.webp`,
+                url: `${process.env.NEXT_PUBLIC_SITE_URL!}/meta-tags/page-view.png`,
                 width: 1800,
                 height: 1600,
-                alt: 'Portfolio preview',
+                alt: 'Portfolio preview for Patryk Kudlik',
             },
         ],
         locale: 'en-US',
         type: 'website',
     },
     twitter: {
-        title: 'krudi-io',
+        title: 'Patryk Kudlik | krudi-io',
         description:
-            'Personal portfolio website built with Next.js and React, featuring projects and experiments in modern web interfaces.',
+            'Personal portfolio of Patryk Kudlik, software engineer building accessible, thoughtful interfaces and resilient architecture with React, TypeScript, Vue, TYPO3.',
         card: 'summary_large_image',
         creator: '@twitter',
         creatorId: '1467726470533754880',
         siteId: '1467726470533754880',
         images: [
             {
-                url: `${process.env.NEXT_PUBLIC_SITE_URL!}/meta-tags/page-view.webp`,
-                alt: 'Portfolio preview',
+                url: `${process.env.NEXT_PUBLIC_SITE_URL!}/meta-tags/page-view.png`,
+                alt: 'Portfolio preview for Patryk Kudlik',
             },
         ],
     },
