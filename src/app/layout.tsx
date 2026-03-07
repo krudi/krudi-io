@@ -1,7 +1,6 @@
 import '@styles/styles.css';
 
 import ApolloClientProvider from '@components/providers/apollo-provider';
-import { Analytics } from '@vercel/analytics/next';
 import type { Metadata, Viewport } from 'next';
 import { Lora } from 'next/font/google';
 import { type ReactNode, Suspense } from 'react';
@@ -239,7 +238,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 <Suspense fallback={null}>
                     <MatomoAnalytics />
                 </Suspense>
-                <Analytics />
             </body>
         </html>
     );
