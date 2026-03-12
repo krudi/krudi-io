@@ -6,77 +6,51 @@ import { Lora } from 'next/font/google';
 import { type ReactNode, Suspense } from 'react';
 
 import { MatomoAnalytics } from '@/components/utils/matomo';
+import { siteMetadata } from '@/utils/seo';
+import { siteUrl } from '@/utils/site-url';
 
 export const metadata: Metadata = {
-    title: 'Patryk Kudlik | krudi-io',
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
-    applicationName: 'krudi-io',
-    description:
-        'Personal portfolio of Patryk Kudlik, software engineer building accessible, thoughtful interfaces and resilient architecture with React, TypeScript, Vue, TYPO3.',
-    keywords: [
-        'Patryk Kudlik',
-        'krudi',
-        'react',
-        'nextjs',
-        'typescript',
-        'javascript',
-        'frontend',
-        'full-stack',
-        'portfolio',
-        'web-developer',
-        'software-engineer',
-        'design-systems',
-        'cms',
-        'accessibility',
-        'performance',
-        'ui',
-        'ux',
-    ],
-    authors: [
-        {
-            name: 'Patryk Kudlik',
-            url: process.env.NEXT_PUBLIC_SITE_URL,
-        },
-    ],
-    creator: 'Patryk Kudlik',
-    publisher: 'Patryk Kudlik',
+    title: siteMetadata.title,
+    metadataBase: new URL(siteUrl),
+    applicationName: siteMetadata.title,
+    description: siteMetadata.description,
+    keywords: siteMetadata.keywords,
+    authors: siteMetadata.authors,
+    creator: siteMetadata.name,
+    publisher: siteMetadata.name,
     alternates: {
-        canonical: process.env.NEXT_PUBLIC_SITE_URL,
+        canonical: siteUrl,
     },
     referrer: 'origin-when-cross-origin',
     openGraph: {
-        title: 'Patryk Kudlik | krudi-io',
-        description:
-            'Personal portfolio of Patryk Kudlik, software engineer building accessible, thoughtful interfaces and resilient architecture with React, TypeScript, Vue, TYPO3.',
-        url: process.env.NEXT_PUBLIC_SITE_URL!,
-        siteName: 'Patryk Kudlik – krudi-io',
+        title: siteMetadata.title,
+        description: siteMetadata.description,
+        url: siteUrl,
+        siteName: siteMetadata.name,
         images: [
             {
-                url: `${process.env.NEXT_PUBLIC_SITE_URL!}/meta-tags/page-view.png`,
-                width: 1800,
-                height: 1600,
-                alt: 'Portfolio preview for Patryk Kudlik',
+                url: siteMetadata.ogImage.url,
+                width: siteMetadata.ogImage.width,
+                height: siteMetadata.ogImage.height,
+                alt: siteMetadata.ogImage.alt,
             },
         ],
         locale: 'en-US',
         type: 'website',
     },
     twitter: {
-        title: 'Patryk Kudlik | krudi-io',
-        description:
-            'Personal portfolio of Patryk Kudlik, software engineer building accessible, thoughtful interfaces and resilient architecture with React, TypeScript, Vue, TYPO3.',
+        title: siteMetadata.title,
+        description: siteMetadata.description,
         card: 'summary_large_image',
-        creator: '@patrykkudlik',
+        creator: siteMetadata.twitterHandle,
         images: [
             {
-                url: `${process.env.NEXT_PUBLIC_SITE_URL!}/meta-tags/page-view.png`,
-                alt: 'Portfolio preview for Patryk Kudlik',
+                url: siteMetadata.ogImage.url,
+                alt: siteMetadata.ogImage.alt,
             },
         ],
     },
-    verification: {
-        google: 'OnPG5VlpLp5UmeyYBqwJdFGNYY_LrqEkHifYjK1qlO4',
-    },
+    verification: siteMetadata.verification,
     icons: {
         icon: [
             {
@@ -226,14 +200,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 />
             </head>
             <body className="py-4 container">
-                <ApolloClientProvider>
-                    <main
-                        className="main"
-                        aria-label="Main content"
-                    >
-                        {children}
-                    </main>
-                </ApolloClientProvider>
+                <ApolloClientProvider>{children}</ApolloClientProvider>
 
                 <Suspense fallback={null}>
                     <MatomoAnalytics />
