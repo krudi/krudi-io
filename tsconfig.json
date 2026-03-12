@@ -6,11 +6,12 @@
             "@app/*": ["./src/app/*"],
             "@components/*": ["./src/components/*"],
             "@lib/*": ["./src/lib/*"],
+            "@utils/*": ["./src/utils/*"],
             "@styles/*": ["./src/styles/*"],
-            "@types": ["./src/types/index"],
-            "@types/*": ["./src/types/*"],
+            "@models": ["./src/types/index"],
+            "@models/*": ["./src/types/*"],
             "@graphql/*": ["./src/graphql/*"],
-            "@constants/*": ["./src/constants/*"],
+            "@constants/*": ["./src/constants/*"]
         }
     },
     "include": [
