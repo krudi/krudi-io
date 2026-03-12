@@ -5,7 +5,7 @@ import SkeletonCards from '@components/ui/skeleton-cards';
 import { GITHUB_ACTIVITY_ITEMS } from '@constants/config';
 import { GITHUB_ACTIVITY_QUERY } from '@graphql/queries/github-activity';
 import { isGitHubIssue, isGitHubRepo } from '@lib/type-guards';
-import type { GitHubActivityQuery, GitHubActivityQueryVariables, GitHubIssue, GitHubRepo } from '@types';
+import type { GitHubActivityQuery, GitHubActivityQueryVariables, GitHubIssue, GitHubRepo } from '@models';
 
 type ActivityItem = {
     id: string;

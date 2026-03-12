@@ -5,7 +5,7 @@ import SkeletonCards from '@components/ui/skeleton-cards';
 import { GITHUB_STAR_ITEMS } from '@constants/config';
 import { STARRED_REPOS_QUERY } from '@graphql/queries/github-starred-repos';
 import { isGitHubRepo } from '@lib/type-guards';
-import type { GitHubRepo, StarredReposQuery, StarredReposQueryVariables } from '@types';
+import type { GitHubRepo, StarredReposQuery, StarredReposQueryVariables } from '@models';
 
 export default function GitHubStars() {
     const login = process.env.NEXT_PUBLIC_GITHUB_USERNAME!;

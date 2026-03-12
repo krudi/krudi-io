@@ -5,7 +5,7 @@ import SkeletonCards from '@components/ui/skeleton-cards';
 import { GITHUB_PINNED_ITEMS } from '@constants/config';
 import { PINNED_REPOS_QUERY } from '@graphql/queries/github-pinned-repositories';
 import { isGitHubRepo } from '@lib/type-guards';
-import type { GitHubRepo, PinnedReposQuery, PinnedReposQueryVariables } from '@types';
+import type { GitHubRepo, PinnedReposQuery, PinnedReposQueryVariables } from '@models';
 import { Star } from 'lucide-react';
 
 export default function Projects() {
