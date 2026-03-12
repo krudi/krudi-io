@@ -32,14 +32,14 @@
     "author": {
         "name": "krudi",
         "email": "patryk.kudlik@gmail.com",
-        "url": "https://github.com/krudi"
+        "url": "https://krudi.io"
     },
     "type": "module",
     "scripts": {
         "build": "next build",
+        "clean": "rm -rf .cache node_modules dist",
         "dev": "next dev",
         "dev:turbo": "next dev --turbo",
-        "clean": "rm -rf .cache node_modules dist",
         "lint:eslint": "eslint . --cache --cache-location .cache/.eslintcache",
         "lint:eslint:fix": "eslint . --fix --cache --cache-location .cache/.eslintcache",
         "lint:prettier": "prettier --check . --cache --cache-strategy metadata --cache-location .cache/.prettiercache",
@@ -78,7 +78,7 @@
     },
     "packageManager": "npm@11.6.4",
     "engines": {
-        "node": ">= 22.18.0",
+        "node": ">= 24.14.0",
         "npm": ">= 11.6.4"
     }
 }
