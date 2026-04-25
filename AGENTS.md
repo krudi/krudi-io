@@ -74,3 +74,25 @@ Next.js (App Router, :3000)
 ## Rules
 
 @.ai/rules/nextjs.md
+
+---
+
+## For Claude Code
+
+### Slash commands
+
+| Command | What it does |
+|---------|---|
+| `/test` | Run lint, typecheck, and build |
+
+### Rules loaded automatically
+
+| Rule file | Applied to |
+|-----------|---|
+| `.ai/rules/nextjs.md` | `**/*.tsx`, `**/*.ts` |
+
+### Constraints
+
+- All content comes from GraphQL — no local data files or hardcoded content
+- GraphQL queries live in `lib/graphql/` — co-locate fragments with the queries that use them
+- No database, no auth — this is a static-content site
