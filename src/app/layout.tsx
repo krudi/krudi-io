@@ -5,7 +5,7 @@ import type { Metadata, Viewport } from 'next';
 import { Lora } from 'next/font/google';
 import { type ReactNode, Suspense } from 'react';
 
-import { MatomoAnalytics } from '@/components/utils/matomo';
+import Script from 'next/script';
 import { siteMetadata } from '@/utils/seo';
 import { siteUrl } from '@/utils/site-url';
 
@@ -203,7 +203,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 <ApolloClientProvider>{children}</ApolloClientProvider>
 
                 <Suspense fallback={null}>
-                    <MatomoAnalytics />
+                    <Script
+                        defer
+                        src="https://umami.krudi.io/script"
+                        data-website-id="67f53af9-360d-408b-9e54-cdbc2c351d6b"
+                    />
                 </Suspense>
             </body>
         </html>
