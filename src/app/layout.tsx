@@ -1,11 +1,10 @@
 import '@styles/styles.css';
-
 import ApolloClientProvider from '@components/providers/apollo-provider';
 import type { Metadata, Viewport } from 'next';
 import { Lora } from 'next/font/google';
+import Script from 'next/script';
 import { type ReactNode, Suspense } from 'react';
 
-import Script from 'next/script';
 import { siteMetadata } from '@/utils/seo';
 import { siteUrl } from '@/utils/site-url';
 
