@@ -22,8 +22,7 @@
         "src/types/**/*.ts",
         "client.d.ts",
         ".next/types/**/*.ts",
-        ".next/dev/types/**/*.ts",
-        "src/components/home/dwsdw"
+        ".next/dev/types/**/*.ts"
     ],
     "exclude": ["node_modules"]
 }
