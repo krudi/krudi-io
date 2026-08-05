@@ -34,5 +34,5 @@
         "rules": ".ai/rules/nextjs.md",
         "lessons": ".ai/memory/lessons.md"
     },
-    "envTemplate": "env-example"
+    "envTemplate": ".env.example"
 }

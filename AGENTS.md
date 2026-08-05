@@ -15,7 +15,7 @@ queries.
 
 **Prerequisites:** Node.js ≥ 20, access to the GraphQL CMS endpoint.
 
-1. `cp env-example .env.local` and fill in GraphQL endpoint
+1. `cp .env.example .env.local` and fill in GraphQL endpoint
 2. `npm install`
 3. `npm run dev` — start Next.js on `localhost:3000`
 4. Verify: open `http://localhost:3000`, confirm content loads from GraphQL
