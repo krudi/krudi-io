@@ -1,6 +1,7 @@
 # krudi.io
 
-Personal portfolio website. Showcases projects, experiments, and a blog. Uses GraphQL + Apollo Client for content queries.
+Personal portfolio website. Showcases projects, experiments, and a blog. Uses GraphQL + Apollo Client for content
+queries.
 
 ## Stack
 
@@ -26,7 +27,7 @@ Personal portfolio website. Showcases projects, experiments, and a blog. Uses Gr
 ```bash
 npm run dev        # start dev server (localhost:3000)
 npm run build      # production build
-npm run lint       # eslint + prettier + stylelint
+npm run lint       # oxlint + oxfmt --check
 npm run typecheck  # tsc --noEmit
 ```
 
@@ -52,6 +53,7 @@ Next.js (App Router, :3000)
 ```
 
 **Key design decisions:**
+
 - GraphQL queries are co-located with the component that uses them
 - Apollo Client handles caching — avoid redundant fetch calls
 - No database — content is entirely managed via the GraphQL CMS
@@ -67,31 +69,16 @@ Next.js (App Router, :3000)
 
 ## Cross-project context
 
-- **Shares config:** `@krudi/eslint-config`, `@krudi/typescript-config`, `@krudi/prettier-config`, `@krudi/stylelint-config` from `shared-configs`
+- **Shares config:** `@krudi/typescript-config` from `shared-configs`
 
 ---
 
 ## Rules
 
-@.ai/rules/nextjs.md
+@.ai/rules/nextjs.md @.ai/memory/lessons.md @.ai/skills/commit/SKILL.md @.ai/skills/pr/SKILL.md
+@.ai/skills/retrospective/SKILL.md @.ai/skills/test/SKILL.md
 
----
-
-## For Claude Code
-
-### Slash commands
-
-| Command | What it does |
-|---------|---|
-| `/test` | Run lint, typecheck, and build |
-
-### Rules loaded automatically
-
-| Rule file | Applied to |
-|-----------|---|
-| `.ai/rules/nextjs.md` | `**/*.tsx`, `**/*.ts` |
-
-### Constraints
+## Constraints
 
 - All content comes from GraphQL — no local data files or hardcoded content
 - GraphQL queries live in `lib/graphql/` — co-locate fragments with the queries that use them
