@@ -13,7 +13,7 @@ queries.
 
 ## Onboarding
 
-**Prerequisites:** Node.js ≥ 20, access to the GraphQL CMS endpoint.
+**Prerequisites:** Node.js ≥ 24.19.0, access to the GraphQL CMS endpoint.
 
 1. `cp .env.example .env.local` and fill in GraphQL endpoint
 2. `npm install`
