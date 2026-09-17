@@ -1,6 +1,5 @@
 'use client';
 
-// Deliberately doesn't render `error.message` — it may carry details not meant for the browser.
 export default function Error({ reset }: { error: Error & { digest?: string }; reset: () => void }) {
     return (
         <main

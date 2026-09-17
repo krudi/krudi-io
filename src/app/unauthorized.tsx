@@ -1,6 +1,5 @@
 import Link from 'next/link';
 
-// Not called anywhere currently — kept ready for when a real auth/permission model needs it.
 export default function Unauthorized() {
     return (
         <main

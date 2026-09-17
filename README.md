@@ -8,9 +8,11 @@ interfaces.
 > [!NOTE]
 >
 > You need to have [Node.js](https://github.com/nodejs) installed on your computer before running this project.
+> See `.nvmrc` for the exact version (`>= 24.19.0`).
 
 1. First clone this repository and navigate into your project directory
-2. `copy .env.example .env` - copy the **.env** file
+2. `copy .env.example .env` - copy the **.env** file, then fill in `GITHUB_ACCESS_TOKEN` and `GITHUB_USERNAME`
+   (used by the GitHub stats feature); `NEXT_PUBLIC_SITE_URL` already defaults to `http://localhost:3000`
 3. Install the dependencies: `npm install`
 4. Run the development server: `npm run dev`
 
@@ -22,6 +24,8 @@ To launch the project in development mode with hot module replacement.
 - `npm run dev:turbo`: to compile faster in local development
 
 _You can view the development server at <http://localhost:3000>_
+
+_To stop the development server, press `Ctrl+C` in the terminal it's running in._
 
 ## Starting production mode
 
@@ -45,3 +49,4 @@ Navigate into your project directory and start linting your files.
 - `npm run format:ox`: formats supported repository files
     - `npm run format:ox:check`: checks formatting without writing files
 - `npm run typecheck`: type-checks the project
+    - `npm run typecheck:next`: generates Next.js's own types first (run before `typecheck` in CI)

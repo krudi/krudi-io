@@ -2,7 +2,6 @@
 
 import '@styles/styles.css';
 
-// Never render `error.message`/stack here — it could leak details not meant for the browser.
 export default function GlobalError({ reset }: { reset: () => void }) {
     return (
         <html lang="en">

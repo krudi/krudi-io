@@ -5,7 +5,6 @@ interface GitHubGraphQLResponse<TData> {
     errors?: Array<{ message: string }>;
 }
 
-// The access token must never reach the client — only call this from a Server Component or route handler, never 'use client' code.
 export async function fetchGitHubGraphQL<TData, TVariables extends Record<string, unknown>>(
     query: string,
     variables: TVariables
