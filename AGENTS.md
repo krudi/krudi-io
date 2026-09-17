@@ -1,24 +1,23 @@
 # krudi.io
 
-Personal portfolio website. Showcases projects, experiments, and a blog. Uses GraphQL + Apollo Client for content
-queries.
+Personal portfolio website. Showcases projects and GitHub activity. Fetches stats directly from GitHub's public GraphQL
+API via a plain `fetch()` wrapper — no CMS, no Apollo Client.
 
 ## Stack
 
 - Next.js 16 (App Router), React 19, TypeScript
-- Tailwind CSS
-- GraphQL with Apollo Client
+- Hand-rolled CSS (native `@layer` cascade under `src/styles/`) — no Tailwind
 
 ---
 
 ## Onboarding
 
-**Prerequisites:** Node.js ≥ 24.19.0, access to the GraphQL CMS endpoint.
+**Prerequisites:** Node.js ≥ 24.19.0, a GitHub personal access token (`GITHUB_ACCESS_TOKEN`).
 
-1. `cp .env.example .env.local` and fill in GraphQL endpoint
+1. `cp .env.example .env.local` and fill in `GITHUB_ACCESS_TOKEN` / `GITHUB_USERNAME`
 2. `npm install`
 3. `npm run dev` — start Next.js on `localhost:3000`
-4. Verify: open `http://localhost:3000`, confirm content loads from GraphQL
+4. Verify: open `http://localhost:3000`, confirm GitHub activity/projects load
 
 ---
 
@@ -36,11 +35,11 @@ npm run typecheck  # tsc --noEmit
 ## Project structure
 
 ```
-app/              # App Router pages
-components/       # UI components
-lib/
-  graphql/        # Apollo client setup, queries, fragments
-public/           # static assets
+src/app/                          # App Router pages
+src/components/                   # shared UI components
+src/features/github-stats/        # GitHub activity/projects feature (components, lib, queries)
+src/styles/                       # hand-rolled CSS cascade (theme, base, layout, html, elements, components, utilities)
+public/                           # static assets
 ```
 
 ---
@@ -49,27 +48,20 @@ public/           # static assets
 
 ```
 Next.js (App Router, :3000)
-  └── Apollo Client → GraphQL CMS (content: projects, blog posts)
+  └── fetchGitHubGraphQL() → GitHub's own public GraphQL API (activity, pinned repos, stars)
 ```
 
 **Key design decisions:**
 
-- GraphQL queries are co-located with the component that uses them
-- Apollo Client handles caching — avoid redundant fetch calls
-- No database — content is entirely managed via the GraphQL CMS
+- GraphQL queries are co-located with the feature that uses them (`src/features/github-stats/lib/queries/`)
+- No database, no CMS — content is either static (this site's own copy) or fetched live from GitHub
 
 ---
 
 ## Testing
 
 - Run before every PR: `npm run lint && npm run typecheck && npm run build`
-- Check that new pages render correctly and GraphQL queries return expected shapes
-
----
-
-## Cross-project context
-
-- **Shares config:** `@krudi/typescript-config` from `shared-configs`
+- Check that new pages render correctly and GitHub queries return expected shapes
 
 ---
 
@@ -80,6 +72,4 @@ Next.js (App Router, :3000)
 
 ## Constraints
 
-- All content comes from GraphQL — no local data files or hardcoded content
-- GraphQL queries live in `lib/graphql/` — co-locate fragments with the queries that use them
-- No database, no auth — this is a static-content site
+- No database, no auth — this is a static-content site with one live data source (GitHub's API)

@@ -2,7 +2,7 @@
     "version": 1,
     "project": {
         "name": "krudi-io",
-        "description": "Personal portfolio website \u2014 projects, experiments, blog via GraphQL CMS",
+        "description": "Personal portfolio website \u2014 projects and GitHub activity via GitHub's public GraphQL API",
         "type": "nextjs",
         "status": "active"
     },
@@ -12,8 +12,8 @@
         "frameworkVersion": "16",
         "runtime": "node",
         "packageManager": "npm",
-        "ui": "tailwind",
-        "graphql": "apollo-client"
+        "ui": "hand-rolled-css",
+        "graphql": "fetch"
     },
     "ports": {
         "dev": 3000
@@ -23,10 +23,6 @@
         "build": "npm run build",
         "lint": "npm run lint",
         "typecheck": "npm run typecheck"
-    },
-    "integrations": {
-        "graphql": "apollo-client",
-        "sharedConfigs": "@krudi/eslint-config, @krudi/typescript-config, @krudi/prettier-config, @krudi/stylelint-config"
     },
     "docs": {
         "agentsFile": "AGENTS.md",
