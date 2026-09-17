@@ -1,5 +1,5 @@
 import '@styles/styles.css';
-import { createPageMetadata } from '@utils/seo';
+import { createPageMetadata } from '@utils/site/seo';
 import type { Metadata } from 'next';
 import { type ReactNode } from 'react';
 

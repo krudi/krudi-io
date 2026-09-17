@@ -1,12 +1,10 @@
 import '@styles/styles.css';
-import ApolloClientProvider from '@components/providers/apollo-provider';
+import { siteMetadata } from '@utils/site/seo';
+import { siteUrl } from '@utils/site/site-url';
 import type { Metadata, Viewport } from 'next';
 import { Lora } from 'next/font/google';
 import Script from 'next/script';
 import { type ReactNode, Suspense } from 'react';
-
-import { siteMetadata } from '@/utils/seo';
-import { siteUrl } from '@/utils/site-url';
 
 export const metadata: Metadata = {
     title: siteMetadata.title,
@@ -199,7 +197,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 />
             </head>
             <body className="py-4 container">
-                <ApolloClientProvider>{children}</ApolloClientProvider>
+                {children}
 
                 <Suspense fallback={null}>
                     <Script

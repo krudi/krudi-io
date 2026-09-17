@@ -1,11 +1,11 @@
-import GitHubContributions from '@components/home/github-contributions';
-import GitHubStars from '@components/home/github-stars';
+import SkeletonCards from '@components/ui/skeleton-cards';
+import { serverEnv } from '@config/server-env';
+import { GitHubContributions, GitHubProjects, GitHubStars } from '@features/github-stats';
+import { GITHUB_ACTIVITY_ITEMS, GITHUB_PINNED_ITEMS, GITHUB_STAR_ITEMS } from '@features/github-stats/constants';
 import { Suspense } from 'react';
 
-import Projects from '@/components/home/github-projects';
-
 export default async function Page() {
-    const login = process.env.NEXT_PUBLIC_GITHUB_USERNAME!;
+    const login = serverEnv.GITHUB_USERNAME;
 
     return (
         <>
@@ -59,8 +59,19 @@ export default async function Page() {
             <section aria-label="Featured projects and pinned GitHub repositories">
                 <h2 page-heading-counter="true">Projects</h2>
 
-                <Suspense>
-                    <Projects />
+                <Suspense
+                    fallback={
+                        <SkeletonCards
+                            as="ul"
+                            itemAs="li"
+                            wrapperClassName="github-projects-list row"
+                            itemClassName="github-projects-list-item col-4 github-projects-list-item-link"
+                            disableGrid
+                            count={GITHUB_PINNED_ITEMS}
+                        />
+                    }
+                >
+                    <GitHubProjects />
                 </Suspense>
             </section>
 
@@ -80,7 +91,20 @@ export default async function Page() {
                             </a>
                         </h2>
                     </div>
-                    <GitHubContributions />
+                    <Suspense
+                        fallback={
+                            <SkeletonCards
+                                as="ul"
+                                itemAs="li"
+                                wrapperClassName="activity-list"
+                                itemClassName="activity-list-item activity-list-item-link"
+                                disableGrid
+                                count={GITHUB_ACTIVITY_ITEMS}
+                            />
+                        }
+                    >
+                        <GitHubContributions />
+                    </Suspense>
                 </section>
 
                 <section
@@ -98,7 +122,20 @@ export default async function Page() {
                             </a>
                         </h2>
                     </div>
-                    <GitHubStars />
+                    <Suspense
+                        fallback={
+                            <SkeletonCards
+                                as="ul"
+                                itemAs="li"
+                                wrapperClassName="activity-list"
+                                itemClassName="activity-list-item activity-list-item-link"
+                                disableGrid
+                                count={GITHUB_STAR_ITEMS}
+                            />
+                        }
+                    >
+                        <GitHubStars />
+                    </Suspense>
                 </section>
             </div>
 
