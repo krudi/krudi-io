@@ -50,15 +50,14 @@
         "typecheck:next": "next typegen"
     },
     "dependencies": {
-        "@apollo/client": "^4.2.10",
-        "graphql": "^17.0.2",
+        "@t3-oss/env-nextjs": "^0.13.11",
         "lucide-react": "^1.28.0",
-        "next": "^16.3.0",
+        "next": "^16.3.5",
         "react": "^19.2.8",
-        "react-dom": "^19.2.8"
+        "react-dom": "^19.2.8",
+        "zod": "^4.6.5"
     },
     "devDependencies": {
-        "@krudi/typescript-config": "^0.1.9",
         "@types/node": "^24.13.3",
         "@types/react": "^19.2.18",
         "@types/react-dom": "^19.2.4",
@@ -71,6 +70,9 @@
         "postcss-load-config": "^6.0.1",
         "postcss-nesting": "^14.0.1",
         "typescript": "^7.0.2"
+    },
+    "overrides": {
+        "nanoid": "^3.3.18"
     },
     "packageManager": "npm@12.0.2",
     "engines": {
