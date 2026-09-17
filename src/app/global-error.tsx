@@ -1,26 +1,42 @@
 'use client';
 
-import NextError from 'next/error';
+import '@styles/styles.css';
 
+// Never render `error.message`/stack here — it could leak details not meant for the browser.
 export default function GlobalError({ reset }: { reset: () => void }) {
     return (
-        <html>
-            <body>
-                <section>
-                    <h3>
-                        <b>Page:</b> global-error.tsx
-                    </h3>
-
-                    <hr className="hr" />
-
-                    <h4>Something went wrong!</h4>
-
-                    <div>
-                        <NextError statusCode={0} />
-                    </div>
-
-                    <button onClick={() => reset()}>Try again</button>
-                </section>
+        <html lang="en">
+            <body style={{ margin: 0 }}>
+                <main
+                    className="container"
+                    style={{
+                        minHeight: '100svh',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: 'var(--spacer)',
+                        textAlign: 'center',
+                    }}
+                >
+                    <h1 style={{ fontSize: 'var(--heading-4)' }}>Something went wrong</h1>
+                    <p style={{ color: 'var(--c-gray)', maxWidth: '32rem' }}>
+                        An unexpected application error occurred. Try again — if the problem persists, come back later.
+                    </p>
+                    <button
+                        type="button"
+                        onClick={() => reset()}
+                        style={{
+                            border: '1px solid var(--c-white-200)',
+                            borderRadius: 'var(--border-radius-sm)',
+                            padding: '0.5rem 1rem',
+                            background: 'none',
+                            cursor: 'pointer',
+                        }}
+                    >
+                        Try again
+                    </button>
+                </main>
             </body>
         </html>
     );
