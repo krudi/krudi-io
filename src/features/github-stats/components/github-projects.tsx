@@ -1,37 +1,30 @@
-'use client';
-
-import { useQuery } from '@apollo/client/react';
-import SkeletonCards from '@components/ui/skeleton-cards';
-import { GITHUB_PINNED_ITEMS } from '@constants/config';
-import { PINNED_REPOS_QUERY } from '@graphql/queries/github-pinned-repositories';
-import { isGitHubRepo } from '@lib/type-guards';
-import type { GitHubRepo, PinnedReposQuery, PinnedReposQueryVariables } from '@models';
+import { serverEnv } from '@config/server-env';
 import { Star } from 'lucide-react';
 
-export default function Projects() {
-    const login = process.env.NEXT_PUBLIC_GITHUB_USERNAME!;
-    const { data, loading, error } = useQuery<PinnedReposQuery, PinnedReposQueryVariables>(PINNED_REPOS_QUERY, {
-        variables: { login, first: GITHUB_PINNED_ITEMS },
-        fetchPolicy: 'cache-first',
-        nextFetchPolicy: 'cache-first',
-        notifyOnNetworkStatusChange: false,
-    });
+import { GITHUB_PINNED_ITEMS } from '../constants';
+import { fetchGitHubGraphQL } from '../lib/github-graphql';
+import { PINNED_REPOS_QUERY } from '../lib/queries/github-pinned-repositories';
+import { isGitHubRepo } from '../lib/type-guards';
+import type { GitHubRepo, PinnedReposQuery, PinnedReposQueryVariables } from '../types';
 
-    const repos = data?.user?.pinnedItems?.nodes?.filter(isGitHubRepo) ?? [];
+export default async function GitHubProjects() {
+    let repos: GitHubRepo[] = [];
+    let error = false;
+
+    try {
+        const data = await fetchGitHubGraphQL<PinnedReposQuery, PinnedReposQueryVariables>(PINNED_REPOS_QUERY, {
+            login: serverEnv.GITHUB_USERNAME,
+            first: GITHUB_PINNED_ITEMS,
+        });
+        repos = data.user?.pinnedItems.nodes.filter(isGitHubRepo) ?? [];
+    } catch {
+        error = true;
+    }
 
     return (
         <div>
             {error ? (
                 <p>Failed to load pinned projects.</p>
-            ) : loading ? (
-                <SkeletonCards
-                    as="ul"
-                    itemAs="li"
-                    wrapperClassName="github-projects-list row"
-                    itemClassName="github-projects-list-item col-4 github-projects-list-item-link"
-                    disableGrid
-                    count={GITHUB_PINNED_ITEMS}
-                />
             ) : repos.length > 0 ? (
                 <ul
                     className="github-projects-list row"

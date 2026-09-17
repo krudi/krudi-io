@@ -1,6 +1,4 @@
-import { gql } from '@apollo/client';
-
-export const GITHUB_ACTIVITY_QUERY = gql`
+export const GITHUB_ACTIVITY_QUERY = `
     fragment ActivityRepository on Repository {
         id
         name
